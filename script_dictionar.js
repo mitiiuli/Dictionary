@@ -10,12 +10,12 @@ function addword() {
         alert('This word already exists, try a new one');
     }
 }
-function s_word(word) {
-  return word == document.getElementById("search_word").value;
+function sword(word) {
+  return word == document.getElementById("searchword").value;
 }
 
 function searchword() {
-    document.getElementById("status").innerHTML = dict.find(s_word);
+    document.getElementById("status").innerHTML = dict.find(sword);
     if(dict.find(s_word)) {
        document.getElementById("status").innerHTML = "Cuvantul exista";
     }
