@@ -16,7 +16,7 @@ function sword(word) {
 
 function searchword() {
     document.getElementById("status").innerHTML = dict.find(sword);
-    if(dict.find(s_word)) {
+    if(dict.find(sword)) {
        document.getElementById("status").innerHTML = "Cuvantul exista";
     }
     else{
