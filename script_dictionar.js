@@ -15,11 +15,16 @@ function sword(word) {
 }
 
 function searchword() {
-    document.getElementById("status").innerHTML = dict.find(sword);
-    if(dict.find(sword)) {
-       document.getElementById("status").innerHTML = "Cuvantul exista";
+    if (dict.length != 0){
+       document.getElementById("status").innerHTML = dict.find(sword);
+       if(dict.find(sword)) {
+          document.getElementById("status").innerHTML = "Cuvantul exista";
+         }
+         else{
+             document.getElementById("status").innerHTML = "Cuvantul nu exista";
+         }
     }
     else{
-       document.getElementById("status").innerHTML = "Cuvantul nu exista";
+       alert('The dictionary is empty');
     }
 }
