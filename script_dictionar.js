@@ -1,23 +1,23 @@
 var dict = [];
-function addword() {
-    var newWord = document.getElementById('newWord').value;
-    console.log(newWord);
-    if (!dict.includes(newWord)) {
-        dict.push(newWord);
+function addWord() {
+    var cuvant = document.getElementById('newWord').value;
+    console.log(cuvant);
+    if (!dict.includes(cuvant)) {
+        dict.push(cuvant);
         document.getElementById('newWord').value = "";
     }
     else {
         alert('This word already exists, try a new one');
     }
 }
-function sword(word) {
-  return word == document.getElementById("searchword").value;
+function sWord(word) {
+  return word == document.getElementById("searchWord").value;
 }
 
-function searchword() {
+function searchWord() {
     if (dict.length != 0){
-       document.getElementById("status").innerHTML = dict.find(sword);
-       if(dict.find(sword)) {
+       document.getElementById("status").innerHTML = dict.find(sWord);
+       if(dict.find(sWord)) {
           document.getElementById("status").innerHTML = "Cuvantul exista";
          }
          else{
